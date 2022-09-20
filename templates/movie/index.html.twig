@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des films{% endblock %}
+
+{% block body %}
+<section>
+    {% for movie in movies %}
+        <article>
+            <a href="{{ path('serie_details',{'id': movie.id}) }}" title="{{ movie.title }}"></a>
+        </article>
+    {% endfor %}
+</section>
+{% endblock %}
